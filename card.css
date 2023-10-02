@@ -1,0 +1,109 @@
+:root {
+    --azul_claro: #527dfa;
+    --azul_escuro: #527DFA;
+    --laranja: #fa886b;
+    --verde_claro: #a6fa39;
+    --verde_escuro: #77ad31;
+  }
+.card {
+  height: 500px;
+  width: 80%;
+  min-width: 280px;
+  max-width: 300px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.133);
+  visibility: hidden;
+  transition: all .5s;
+}
+
+.card:hover{
+  transform: scale(1.03);
+    transition: 0.3s;
+}
+
+.cardHeader {
+  background-image: url(produto.jpg);
+  background-position:center;
+  background-size: cover;
+  height: 350px;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.coracao{
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  width: 25px;
+  position: relative;
+  left: 80px;
+  top:20px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.coracao:hover{
+  opacity: .8;
+}
+
+.off{
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: relative;
+  left: -80px;
+}
+
+.cardBody{
+  display: flex;
+  padding-top: 1rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.cardBody h1{
+  font-size: 18px;
+  width: 120px;
+  text-align: left;
+}
+.cardBody .val{
+  color: var(--laranja);
+  font-weight: 800;
+  font-size: 18px;
+   
+}
+
+.cardMiddle{
+  text-align: left;
+  padding-left: 1.8rem;
+  padding-top: .8rem;
+}
+
+.star{
+  width: 15px;
+}
+
+.cardFooter{
+
+  font-weight: 800;
+  font-size: 21px;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.cardFooter a{
+  color: var(--verde_escuro);
+}
+
+
+
+.cards{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}

@@ -1,0 +1,36 @@
+:root {
+    --azul_claro: #527dfa;
+    --azul_escuro: #527DFA;
+    --laranja: #fa886b;
+    --verde_claro: #a6fa39;
+    --verde_escuro: #77ad31;
+  }
+.scrollTop{
+    background-color: var(--azul_escuro);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: -40px;
+    right: 20px;
+    transition: bottom .5s;
+}
+
+.scrollTop.active{
+    bottom: 40px;
+}
+.scrollTop div{
+    background-color: white;
+    width: 20px;
+    height: 3px;
+    border-radius: 5px;
+}
+
+.scrollTop div.line1{
+    position: relative;
+    transform: rotate(-50deg) translate(-10px, 14px);
+}
+.scrollTop div.line2{
+    position: relative;
+    transform: rotate(50deg) translate(20px, -3px);
+}

@@ -1,0 +1,183 @@
+:root {
+    --azul_claro: #527dfa;
+    --azul_escuro: #527DFA;
+    --laranja: #fa886b;
+    --verde_claro: #a6fa39;
+    --verde_escuro: #77ad31;
+  }
+.menuMobile{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: var(--azul_escuro);
+    padding: 15px 0px 15px 0px;
+    z-index: 10;
+    text-align: right;
+    display: flex;
+    justify-content: end;
+    gap:20px;
+    font-weight: 800;
+    font-size: 16px;
+    transition: .5s;
+    
+}
+.menuMobile a{
+    font-size: 14px;
+    color: white;
+    position: fixed;
+    left: -8px;
+    top:8px;
+    word-wrap: break-word;
+    width: 80px;
+}
+.backgroundMenu{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 1000%;
+    background-color:rgba(0, 0, 0, 0.313);
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s opacity;
+}
+
+.backgroundMenu.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
+.btnMenu{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:9px;
+    margin-right: 20px;
+}
+
+
+.btnMenu div{
+    background-color: white;
+    width: 40px;
+    height: 2px;
+    border-radius: 5px;
+    transition:  .3s;
+}
+.btnMenu div.active{
+    background-color: white;
+}
+.btnMenu div.line2{
+    width: 30px;
+    transform: translateX(30%);
+}
+
+.btnMenu.active .line1 {
+    transform: rotate(-45deg) translate(-2px, 12px);
+  }
+  
+  .btnMenu.active .line2 {
+    opacity: 0;
+  }
+  
+  .btnMenu.active .line3 {
+    transform: rotate(45deg) translate(-2px, -14px);
+  }
+.menuOverlay{
+    background-color: var(--azul_escuro);
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    top: 50px;
+    left: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: end;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    transition: .5s left;
+    
+}
+.menuOverlay.active{
+    left: 50vw;
+}
+
+.copyMenu h1{
+    font-size: 14px;
+    display: inline;
+}
+
+.opcoes{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 30px;
+    margin-right: 0px;
+}
+.opcoes a{
+    color: white;
+    font-size: 14px;
+    display: flex;  
+    justify-content: end;
+    width: 100vw;
+    position: relative;
+    left: 100px;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s left, 1s opacity;
+}
+.opcoes hr{
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-left: -50px;
+    opacity: .7;
+}
+.menuOverlay.active  a{
+    left: -20px;
+    opacity: 1;
+    transition: .9s;
+}
+
+@media screen and (min-width:600px) {
+    .menuMobile,.menuOverlay{
+        display: none;
+        pointer-events: none;
+    }
+    .menuDesktop{
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        padding: 20px 0px;
+        z-index: 3;
+        transition: .3s;
+    }
+    
+    .menuDesktop a{
+        color: var(--azul_claro);
+        font-weight: 600;
+        font-size: 16px;
+        transition: opacity .3s;
+    }
+
+    .menuDesktop a:hover{
+        opacity: .7;
+        
+    }
+
+    .menuDesktop.active{
+        background-color: var(--azul_escuro);
+    }
+    .menuDesktop.active a{
+        color: white;
+    }
+
+}
+
