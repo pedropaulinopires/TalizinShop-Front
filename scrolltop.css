@@ -13,7 +13,7 @@
     position: fixed;
     bottom: -40px;
     right: 20px;
-    transition: bottom .5s;
+    transition: all .5s;
 }
 
 .scrollTop.active{
@@ -33,4 +33,20 @@
 .scrollTop div.line2{
     position: relative;
     transform: rotate(50deg) translate(20px, -3px);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .scrollTop:hover{
+        opacity: .8;
+        transform: scale(1.03);
+        cursor: pointer;
+        transition: .5s;
+    }
+  }
+
+  .scrollTop:active{
+    opacity: .8;
+    transform: scale(1.03);
+    cursor: pointer;
+    transition: .5s;
 }

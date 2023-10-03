@@ -67,6 +67,7 @@
     border-radius: 5px;
     transition:  .3s;
 }
+
 .btnMenu div.active{
     background-color: white;
 }
@@ -104,6 +105,12 @@
 .menuOverlay.active{
     left: 50vw;
 }
+
+@media (hover: hover) and (pointer: fine) {
+    .opcoes a:hover{
+       color: rgba(255, 255, 255, 0.57);
+    }
+  }
 
 .copyMenu h1{
     font-size: 14px;
@@ -147,7 +154,8 @@
         pointer-events: none;
     }
     .menuDesktop{
-        background-color: transparent;
+        /* background-color: transparent; */
+        background-color: var(--azul_escuro);
         position: fixed;
         top: 0;
         left: 0;
@@ -155,25 +163,35 @@
         display: flex;
         justify-content: center;
         gap: 60px;
-        padding: 20px 0px;
+        padding: 15px 0px;
         z-index: 3;
-        transition: .3s;
+        transition: .3s ease-in-out;
     }
+ 
     
     .menuDesktop a{
-        color: var(--azul_claro);
+        /* color: var(--azul_claro); */
+        color: white;
         font-weight: 600;
         font-size: 16px;
-        transition: opacity .3s;
+        padding: 5px 10px;
+        border-radius: .5rem;
+        transition: .3s ease-in-out;
     }
 
-    .menuDesktop a:hover{
-        opacity: .7;
-        
-    }
+    @media (hover: hover) and (pointer: fine) {
+        .menuDesktop a:hover{
+            background-color: rgba(255, 255, 255, 0.206);
+          
+            
+        }
+      }
+
+    
 
     .menuDesktop.active{
         background-color: var(--azul_escuro);
+        padding: 10px 0px;
     }
     .menuDesktop.active a{
         color: white;
